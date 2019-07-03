@@ -1,8 +1,3 @@
-SUBDIRS = algos nodejs
-
-all: $(SUBDIRS)
-
-$(SUBDIRS):
-	$(MAKE) -C $@
-
-.PHONY: $(SUBDIRS)
+all:
+	node-gyp configure
+	node-gyp build
